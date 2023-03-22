@@ -4,11 +4,15 @@ import React, { useState, useEffect } from "react";
 const InitFox = <div className="idle"></div>;
 const Eating = <div className="eating"></div>;
 const happy = <div className="happy"></div>
+const hungry = <div className="hungry"></div>
+const dead = <div className="dead"></div>
+const hatching = <div className="hatching"></div>
+const sleeping = <div className="sleeping"></div>
 
 const Fox = () => {
   const [fox, setFox] = useState(InitFox);
 
-  const doing = "happy";
+  const doing = "sleeping";
 
   useEffect(() => {
     switch (doing) {
@@ -21,6 +25,18 @@ const Fox = () => {
         case "happy":
           setFox(happy);
           break;
+          case "hungry":
+            setFox(hungry);
+            break;
+            case "dead":
+            setFox(dead);
+            break;
+            case "hatching":
+            setFox(hatching);
+            break;
+            case "sleeping":
+            setFox(sleeping);
+            break;
       default:
         setFox(InitFox);
     }
