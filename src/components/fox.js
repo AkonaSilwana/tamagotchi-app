@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 
 const InitFox = <div className="idle"></div>;
 const Eating = <div className="eating"></div>;
+const happy = <div className="happy"></div>
 
 const Fox = () => {
   const [fox, setFox] = useState(InitFox);
 
-  const doing = "init";
+  const doing = "happy";
 
   useEffect(() => {
     switch (doing) {
@@ -17,6 +18,9 @@ const Fox = () => {
       case "eating":
         setFox(Eating);
         break;
+        case "happy":
+          setFox(happy);
+          break;
       default:
         setFox(InitFox);
     }

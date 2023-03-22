@@ -35,3 +35,21 @@
     background-position: -2073px;
   }
 }
+
+.happy {
+  position: absolute;
+  top: 35rem;
+  left: 15rem;
+
+  background-image: url("../../public/Yay.png");
+  background-repeat: no-repeat;
+  width: 130.8px;
+  height: 213px;
+  animation: happy 2s steps(5) infinite;
+
+}
+@keyframes happy {
+  to {
+    background-position: -654px;
+  }
+}
