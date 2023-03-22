@@ -2,7 +2,10 @@ import "./App.css";
 //import Tamagotchi from "./components/tamagotchi";
 import Fox from "./components/fox";
 import styled from "styled-components";
+import FeedButton from "./components/feedButton";
+import React, { useState } from "react";
 
+//idk fix this later?
 const Tamagotchi = styled.div`
   display: flex;
   align-items: center;
@@ -15,12 +18,15 @@ const Tamagotchi = styled.div`
 `;
 
 function App() {
+  const [foxState, setFoxState] = useState("init");
+
   return (
     <div className="App">
       <h1>Welcome to our Tamagotchi App</h1>
       <Tamagotchi>
-        <Fox />
+        <Fox setFoxState={setFoxState} />
       </Tamagotchi>
+      <FeedButton setFoxState={setFoxState} />
     </div>
   );
 }
