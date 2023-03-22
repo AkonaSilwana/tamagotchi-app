@@ -1,0 +1,37 @@
+.idle {
+  position: absolute;
+  top: 35rem;
+  left: 15rem;
+
+  background-image: url("../../public/AtRest.png");
+  background-repeat: no-repeat;
+  width: 117px;
+  height: 165px;
+  animation: idle 2s steps(3) infinite;
+}
+@keyframes idle {
+  to {
+    background-position: -372px;
+  }
+}
+
+.eating {
+  position: absolute;
+  top: 35rem;
+  left: 15rem;
+
+  background-image: url("../../public/Eating.png");
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 165px;
+  animation: eating 3s steps(10);
+}
+
+@keyframes eating {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -2073px;
+  }
+}
