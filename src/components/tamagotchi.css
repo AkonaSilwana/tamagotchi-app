@@ -1,0 +1,21 @@
+.tamagotchi {
+  height: 40rem;
+  width: 40rem;
+  border: 0.25rem solid black;
+}
+.fox {
+  position: absolute;
+  top: 35rem;
+  left: 15rem;
+
+  background-image: url("../../public/AtRest.png");
+  background-repeat: no-repeat;
+  width: 117px;
+  height: 165px;
+  animation: idle 2s steps(3) infinite;
+}
+@keyframes idle {
+  to {
+    background-position: -372px;
+  }
+}
