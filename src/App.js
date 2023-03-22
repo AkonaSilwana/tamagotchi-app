@@ -4,6 +4,7 @@ import Fox from "./components/fox";
 import styled from "styled-components";
 import FeedButton from "./components/feedButton";
 import React, { useState } from "react";
+import SleepButton from "./components/sleepButton";
 
 //idk fix this later?
 const Tamagotchi = styled.div`
@@ -17,18 +18,16 @@ const Tamagotchi = styled.div`
   bottom: 0;
 `;
 
-function App() {
-  const [foxState, setFoxState] = useState("init");
+const App = () => {
+  const [fox, setFox] = useState("init");
 
   return (
-    <div className="App">
-      <h1>Welcome to our Tamagotchi App</h1>
-      <Tamagotchi>
-        <Fox setFoxState={setFoxState} />
-      </Tamagotchi>
-      <FeedButton setFoxState={setFoxState} />
+    <div>
+      <Fox foxState={fox} />
+      <FeedButton setFoxState={setFox} />
+      <SleepButton setFoxState={setFox} />
     </div>
   );
-}
+};
 
 export default App;

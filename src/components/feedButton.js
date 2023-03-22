@@ -2,7 +2,7 @@ import React from "react";
 
 const FeedButton = ({ setFoxState }) => {
   const handleFeedClick = () => {
-    console.log("feed!");
+    //console.log("feed!");
     setFoxState("eating");
   };
 
