@@ -1,6 +1,6 @@
 import React from "react";
 import "./buttons.css";
-import Nightbg from "../images/Nightbg.webp";
+//import Nightbg from "../images/Nightbg.webp";
 
 const SleepButton = ({
   isActive,
@@ -8,7 +8,7 @@ const SleepButton = ({
   setFoxState,
   setHealth,
   setHappiness,
-  setBackgroundImage,
+  // setBackgroundImage,
 }) => {
   const MAX_HEALTH = 100;
   const MAX_HAPPINESS = 100;
@@ -17,7 +17,7 @@ const SleepButton = ({
     setFoxState("sleeping");
     setHealth((prevHealth) => Math.min(prevHealth + 2, MAX_HEALTH));
     setHappiness((prevHappiness) => Math.min(prevHappiness + 4, MAX_HAPPINESS));
-    setBackgroundImage(Nightbg);
+    // setBackgroundImage(Nightbg);
   };
 
   return (
