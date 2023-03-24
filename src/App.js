@@ -1,7 +1,7 @@
 import "./App.css";
 //import Tamagotchi from "./components/tamagotchi";
 import Fox from "./components/fox";
-import styled from "styled-components";
+//import styled from "styled-components";
 import FeedButton from "./components/buttons/feedButton";
 import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
