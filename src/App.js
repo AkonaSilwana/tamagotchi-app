@@ -24,7 +24,7 @@ const App = () => {
     const interval = setInterval(() => {
       setHealth((prevHealth) => Math.max(prevHealth - 4, 0));
       setHappiness((prevHappiness) => Math.max(prevHappiness - 6, 0));
-      setHunger((prevHunger) => prevHunger + 1);
+      setHunger((prevHunger) => prevHunger + 2);
     }, 500);
 
     return () => clearInterval(interval);
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <BackgroundImage backgroundState={backgroundImage}>
+      <BackgroundImage backgroundState={backgroundImage} healthState={health}>
         <div className="tamagotchi">
           <Fox foxState={fox} />
         </div>
@@ -50,6 +50,8 @@ const App = () => {
           />
           <SleepButton
             isActive={isActive}
+            setHunger={setHunger}
+            healthState={health}
             setIsActive={setIsActive}
             setBackgroundImage={setBackgroundImage}
             setFoxState={setFox}
