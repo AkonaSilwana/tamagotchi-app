@@ -23,7 +23,7 @@ const App = () => {
       setHealth((prevHealth) => Math.max(prevHealth - 4, 0));
       setHappiness((prevHappiness) => Math.max(prevHappiness - 6, 0));
       setHunger((prevHunger) => prevHunger + 1);
-    }, 60000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
