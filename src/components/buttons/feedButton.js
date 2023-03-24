@@ -4,7 +4,7 @@ import "./buttons.css";
 const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
   const handleFeedClick = () => {
     setFoxState("eating");
-    setHunger((prevHunger) => Math.max(prevHunger - 1, 0));
+    setHunger((prevHunger) => Math.max(prevHunger - 50, 0));
     setIsActive(false);
     setTimeout(() => {
       setFoxState("idle");
