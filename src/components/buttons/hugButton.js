@@ -5,8 +5,7 @@ const CleanButton = ({ setFoxState, setHealth, setHappiness }) => {
   const MAX_HAPPINESS = 100;
 
   const handleCleanClick = () => {
-    //console.log("feed!");
-    setFoxState("Bathing GGrrrrr!!");
+    setFoxState("happy");
     setHealth((prevHealth) => Math.min(prevHealth + 6, MAX_HEALTH));
     setHappiness((prevHappiness) => Math.min(prevHappiness - 2, MAX_HAPPINESS));
   };

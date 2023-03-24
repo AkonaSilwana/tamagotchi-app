@@ -5,7 +5,7 @@ import styled from "styled-components";
 import FeedButton from "./components/buttons/feedButton";
 import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
-import CleanButton from "./components/buttons/cleanButton";
+import HugButton from "./components/buttons/hugButton";
 
 //idk fix this later?
 const Tamagotchi = styled.div`
@@ -30,10 +30,10 @@ const App = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHealth((prevHealth) => Math.max(prevHealth - 1, 0));
-      setHappiness((prevHappiness) => Math.max(prevHappiness - 3, 0));
-      setHunger((prevHunger) => prevHunger + 1);
-    }, 6000);
+      setHealth((prevHealth) => Math.max(prevHealth - 4, 0));
+      setHappiness((prevHappiness) => Math.max(prevHappiness - 6, 0));
+      setHunger((prevHunger) => (prevHunger + 1));
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
@@ -55,7 +55,7 @@ const App = () => {
           setHealth={setHealth}
           setHappiness={setHappiness}
         />
-        <CleanButton
+        <HugButton
           setFoxState={setFox}
           setHealth={setHealth}
           setHappiness={setHappiness}
