@@ -9,7 +9,6 @@ const SleepButton = ({ setFoxState, setHealth, setHappiness }) => {
     setFoxState("sleeping");
     setHealth((prevHealth) => Math.min(prevHealth + 2, MAX_HEALTH));
     setHappiness((prevHappiness) => Math.min(prevHappiness + 4, MAX_HAPPINESS));
-    setFoxState("idle");
   };
 
   return <button className="button" onClick={handleSleepClick}>Sleep</button>;

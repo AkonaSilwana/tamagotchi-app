@@ -10,7 +10,6 @@ const CleanButton = ({ setFoxState, setHealth, setHappiness }) => {
     setFoxState("happy");
     setHealth((prevHealth) => Math.min(prevHealth + 6, MAX_HEALTH));
     setHappiness((prevHappiness) => Math.min(prevHappiness - 2, MAX_HAPPINESS));
-    setFoxState("idle");
   };
 
   return (
