@@ -31,18 +31,6 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (health === 99) {
-      setFox("dead");
-    }
-  }, [health]);
-
-  useEffect(() => {
-    if (happiness === 0) {
-      setFox("sad");
-    }
-  }, [happiness]);
-
 
   return (
     <div
