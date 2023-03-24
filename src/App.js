@@ -1,28 +1,18 @@
 import "./App.css";
 //import Tamagotchi from "./components/tamagotchi";
 import Fox from "./components/fox";
-import styled from "styled-components";
+//import styled from "styled-components";
 import FeedButton from "./components/buttons/feedButton";
 import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
 import HugButton from "./components/buttons/hugButton";
 
-//idk fix this later?
-const Tamagotchi = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`;
-
 const App = () => {
   const [fox, setFox] = useState("init");
   const MAX_HEALTH = 100;
   const MAX_HAPPINESS = 100;
+
+  const [isActive, setIsActive] = useState(true);
 
   const [health, setHealth] = useState(MAX_HEALTH);
   const [happiness, setHappiness] = useState(MAX_HAPPINESS);
@@ -32,7 +22,7 @@ const App = () => {
     const interval = setInterval(() => {
       setHealth((prevHealth) => Math.max(prevHealth - 4, 0));
       setHappiness((prevHappiness) => Math.max(prevHappiness - 6, 0));
-      setHunger((prevHunger) => (prevHunger + 1));
+      setHunger((prevHunger) => prevHunger + 1);
     }, 60000);
 
     return () => clearInterval(interval);
@@ -49,13 +39,22 @@ const App = () => {
         <p>Hunger: {hunger}</p>
       </div>
       <div className="actions">
-        <FeedButton setFoxState={setFox} setHunger={setHunger} />
+        <FeedButton
+          isActive={isActive}
+          setIsActive={setIsActive}
+          setFoxState={setFox}
+          setHunger={setHunger}
+        />
         <SleepButton
+          isActive={isActive}
+          setIsActive={setIsActive}
           setFoxState={setFox}
           setHealth={setHealth}
           setHappiness={setHappiness}
         />
         <HugButton
+          isActive={isActive}
+          setIsActive={setIsActive}
           setFoxState={setFox}
           setHealth={setHealth}
           setHappiness={setHappiness}

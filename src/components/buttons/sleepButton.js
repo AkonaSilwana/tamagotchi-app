@@ -1,7 +1,13 @@
 import React from "react";
 import "./buttons.css";
 
-const SleepButton = ({ setFoxState, setHealth, setHappiness }) => {
+const SleepButton = ({
+  isActive,
+  setIsActive,
+  setFoxState,
+  setHealth,
+  setHappiness,
+}) => {
   const MAX_HEALTH = 100;
   const MAX_HAPPINESS = 100;
 
@@ -12,7 +18,11 @@ const SleepButton = ({ setFoxState, setHealth, setHappiness }) => {
   };
 
   return (
-    <button className="button" onClick={handleSleepClick}>
+    <button
+      className={isActive ? "activeButton" : "inactiveButton"}
+      disabled={!isActive}
+      onClick={handleSleepClick}
+    >
       Sleep
     </button>
   );
