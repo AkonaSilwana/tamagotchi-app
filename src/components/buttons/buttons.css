@@ -1,0 +1,11 @@
+.button{
+    background-color: orange;
+    padding: 2%;
+    border: none;
+    border-radius: 25%;
+}
+
+.button:hover{
+    transform: scale(150%);
+}
+
