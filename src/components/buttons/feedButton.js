@@ -5,6 +5,10 @@ const FeedButton = ({ setFoxState, setHunger }) => {
   const handleFeedClick = () => {
     setFoxState("eating");
     setHunger((prevHunger) => Math.max(prevHunger - 1, 0));
+
+    setTimeout(() => {
+      setFoxState("idle");
+    }, 3000);
   };
 
   return (
