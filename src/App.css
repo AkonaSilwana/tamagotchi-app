@@ -30,22 +30,11 @@
 .actions {
   display: flex;
   justify-content: space-around;
-  width: 80%;
-}
-
-.action-button {
-  background-color: #f7b32d;
-  color: white;
+  width: 50%;
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.action-button:hover {
-  background-color: #d19016;
+  padding: 20px;
 }
 
 

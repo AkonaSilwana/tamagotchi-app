@@ -1,7 +1,7 @@
 .idle {
   position: absolute;
-  top: 5rem;
-  left: 41rem;
+  top: 10%;
+  left: 47%;
 
   background-image: url("../../public/AtRest.png");
   background-repeat: no-repeat;
@@ -17,8 +17,8 @@
 
 .eating {
   position: absolute;
-  top: 5rem;
-  left: 37rem;
+  top: 10%;
+  left: 45%;
 
   background-image: url("../../public/Eating.png");
   background-repeat: no-repeat;
@@ -38,8 +38,8 @@
 
 .happy {
   position: absolute;
-  top: 4rem;
-  left: 41rem;
+  top: 7%;
+  left: 47%;
 
   background-image: url("../../public/Yay.png");
   background-repeat: no-repeat;
@@ -109,8 +109,8 @@
 
 .sleeping {
   position: absolute;
-  top: 5rem;
-  left: 38rem;
+  top: 10%;
+  left: 44%;
 
   background-image: url("../../public/Sleeping.png");
   background-repeat: no-repeat;
