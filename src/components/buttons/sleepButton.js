@@ -1,5 +1,5 @@
 import React from "react";
-import './buttons.css';
+import "./buttons.css";
 
 const SleepButton = ({ setFoxState, setHealth, setHappiness }) => {
   const MAX_HEALTH = 100;
@@ -9,10 +9,13 @@ const SleepButton = ({ setFoxState, setHealth, setHappiness }) => {
     setFoxState("sleeping");
     setHealth((prevHealth) => Math.min(prevHealth + 2, MAX_HEALTH));
     setHappiness((prevHappiness) => Math.min(prevHappiness + 4, MAX_HAPPINESS));
-    setFoxState("idle");
   };
 
-  return <button className="button" onClick={handleSleepClick}>Sleep</button>;
+  return (
+    <button className="button" onClick={handleSleepClick}>
+      Sleep
+    </button>
+  );
 };
 
 export default SleepButton;
