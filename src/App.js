@@ -13,7 +13,6 @@ const App = () => {
   const MAX_HAPPINESS = 100;
 
   const [isActive, setIsActive] = useState(true);
-
   const [health, setHealth] = useState(MAX_HEALTH);
   const [happiness, setHappiness] = useState(MAX_HAPPINESS);
   const [hunger, setHunger] = useState(0);
