@@ -1,7 +1,7 @@
 .idle {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 41rem;
 
   background-image: url("../../public/AtRest.png");
   background-repeat: no-repeat;
@@ -17,8 +17,8 @@
 
 .eating {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 37rem;
 
   background-image: url("../../public/Eating.png");
   background-repeat: no-repeat;
@@ -38,8 +38,8 @@
 
 .happy {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 4rem;
+  left: 41rem;
 
   background-image: url("../../public/Yay.png");
   background-repeat: no-repeat;
@@ -55,8 +55,8 @@
 
 .hungry {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 41rem;
 
   background-image: url("../../public/Hungry.png");
   background-repeat: no-repeat;
@@ -72,8 +72,8 @@
 }
 .dead {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 41rem;
 
   background-image: url("../../public/TombStone.png");
   background-repeat: no-repeat;
@@ -89,8 +89,8 @@
 
 .hatching {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 41rem;
 
   background-image: url("../../public/Egg.png");
   background-repeat: no-repeat;
@@ -109,8 +109,8 @@
 
 .sleeping {
   position: absolute;
-  top: 35rem;
-  left: 15rem;
+  top: 5rem;
+  left: 38rem;
 
   background-image: url("../../public/Sleeping.png");
   background-repeat: no-repeat;
@@ -122,13 +122,4 @@
   to {
     background-position: -1000px;
   }
-}
-
-.body{
-    background-color: #222;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 80vh;
 }
