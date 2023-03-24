@@ -5,7 +5,7 @@ import FeedButton from "./components/buttons/feedButton";
 import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
 import HugButton from "./components/buttons/hugButton";
-import Daybg from './Daybg.png';
+import Daybg from './components/images/Daybg.png';
 // import Nightbg from "./Nightbg.webp";
 
 

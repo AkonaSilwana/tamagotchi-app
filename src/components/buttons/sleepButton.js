@@ -1,6 +1,6 @@
 import React from "react";
 import "./buttons.css";
-import Nightbg from "../../Nightbg.webp";
+import Nightbg from "../images/Nightbg.webp";
 
 
 const SleepButton = ({ setFoxState, setHealth, setHappiness, setBackgroundImage }) => {
