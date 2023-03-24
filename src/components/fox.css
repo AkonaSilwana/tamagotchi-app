@@ -1,6 +1,6 @@
 .idle {
   position: absolute;
-  top: 10%;
+  top: 58%;
   left: 47%;
 
   background-image: url("../../public/AtRest.png");
@@ -17,7 +17,7 @@
 
 .eating {
   position: absolute;
-  top: 10%;
+  top: 58%;
   left: 45%;
 
   background-image: url("../../public/Eating.png");
@@ -38,7 +38,7 @@
 
 .happy {
   position: absolute;
-  top: 7%;
+  top: 50%;
   left: 47%;
 
   background-image: url("../../public/Yay.png");
