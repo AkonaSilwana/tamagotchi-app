@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
 import HugButton from "./components/buttons/hugButton";
 import Daybg from "./components/images/Daybg.png";
+import SpeechBubble from "./components/speechBubble";
 // import Nightbg from "./Nightbg.webp";
 
 const App = () => {
@@ -64,6 +65,7 @@ const App = () => {
           setHealth={setHealth}
           setHappiness={setHappiness}
         />
+        {/* <SpeechBubble></SpeechBubble> */}
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+.speech-bubble {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .speech-bubble__input {
+    width: 200px;
+    height: 100px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .speech-bubble__arrow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.2);
+  }
