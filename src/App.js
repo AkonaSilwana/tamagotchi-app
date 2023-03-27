@@ -31,7 +31,6 @@ const App = () => {
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {
         if (prevHunger >= 70) {
-          console.log(isActive);
           if (isActive === true) {
             setFox("hungry");
           }
