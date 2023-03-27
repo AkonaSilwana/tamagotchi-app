@@ -91,36 +91,39 @@
   position: absolute;
   top: 50%;
   left: 47%;
+
   background-image: url("../../public/Egg1.png");
   background-repeat: no-repeat;
   width: 175px;
   height: 217px;
-  animation: egg 2s steps(3) infinite;
-}
-@keyframes egg {
-  from {
-    background-position: 0;
-  }
-  to {
-    background-position: -525px;
-  }
-}
-.hatching {
-  position: absolute;
-  top: 50%;
-  left: 47%;
-  background-image: url("../../public/Egg2.png");
-  background-repeat: no-repeat;
-  width: 175px;
-  height: 217px;
-  animation: hatching 3s steps(4);
+  animation: hatching 4s steps(7) infinite;
 }
 @keyframes hatching {
   from {
     background-position: 0;
   }
   to {
-    background-position: -700px;
+    background-position: -1225px;
+  }
+}
+
+.hatching {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+
+  background-image: url("../../public/Egg2.png");
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 217px;
+  animation: hatching 4s steps(7);
+}
+@keyframes hatching {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1225px;
   }
 }
 
