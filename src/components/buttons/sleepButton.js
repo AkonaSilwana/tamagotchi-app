@@ -13,7 +13,7 @@ const SleepButton = ({
   const MAX_HEALTH = 100;
   const MAX_HAPPINESS = 100;
   const MAX_HUNGER = 100;
-  const INTERVAL = 500;
+  const INTERVAL = 1000;
 
   const handleSleepClick = () => {
     setIsActive(false);

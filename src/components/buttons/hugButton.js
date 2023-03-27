@@ -1,4 +1,3 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import "./buttons.css";
 
@@ -14,8 +13,8 @@ const CleanButton = ({
 
   const handleCleanClick = () => {
     setFoxState("happy");
-    setHealth((prevHealth) => Math.min(prevHealth + 6, MAX_HEALTH));
-    setHappiness((prevHappiness) => Math.min(prevHappiness - 2, MAX_HAPPINESS));
+    setHealth((prevHealth) => Math.min(prevHealth + 1, MAX_HEALTH));
+    setHappiness((prevHappiness) => Math.min(prevHappiness + 20, MAX_HAPPINESS));
     setIsActive(false);
     setTimeout(() => {
       setIsActive(true);
