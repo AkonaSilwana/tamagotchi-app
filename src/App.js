@@ -42,6 +42,20 @@ const App = () => {
       });
     }, 500);
 
+    setHealth((prevHealth) => {
+      if (prevHealth === 0) {
+        setIsActive((prevActive) => {
+        
+          
+          return false;
+        });
+        setFox("dead");
+       
+      }
+      return  prevHealth; 
+    });
+ 
+
     return () => clearInterval(interval);
   }, [health]);
 
@@ -83,9 +97,7 @@ const App = () => {
           <p>Happiness: {happiness}</p>
           <p>Hunger: {hunger}</p>
         </div>
-        <div className="tamagotchi">
-          <Fox foxState={fox} />
-        </div>
+
       </BackgroundImage>
     </div>
   );
