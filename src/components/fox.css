@@ -96,7 +96,7 @@
   background-repeat: no-repeat;
   width: 175px;
   height: 217px;
-  animation: hatching 4s steps(7);
+  animation: hatching 4s steps(7) infinite;
 }
 @keyframes hatching {
   from {

@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import SleepButton from "./components/buttons/sleepButton";
 import HugButton from "./components/buttons/hugButton";
 import Daybg from "./components/images/Daybg.png";
-// import Nightbg from "./Nightbg.webp";
+import Nightbg from "./components/images/Nightbg.webp"
 
 const App = () => {
   const [fox, setFox] = useState("init");
@@ -26,8 +26,15 @@ const App = () => {
       setHunger((prevHunger) => prevHunger + 1);
     }, 30000);
 
+    if (health === 0) {
+      setFox("dead");
+      setBackgroundImage(Nightbg)
+    }
+
     return () => clearInterval(interval);
-  }, []);
+  }, [health]);
+
+      
 
   return (
     <div
