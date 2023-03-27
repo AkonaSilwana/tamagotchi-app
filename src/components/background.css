@@ -1,3 +1,4 @@
-.tamagotchi-screen{
-    height: 80vh;
+.tamagotchi-screen {
+  height: 80vh;
+  background-position: bottom;
 }

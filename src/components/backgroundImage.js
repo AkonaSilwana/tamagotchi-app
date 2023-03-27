@@ -3,7 +3,7 @@
 
 import "../App.css";
 import React, { useState, useEffect } from "react";
-import './background.css';
+import "./background.css";
 
 import Daybg from "../images/Daybg.png";
 import Nightbg from "../images/Nightbg.webp";
