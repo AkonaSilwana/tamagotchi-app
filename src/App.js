@@ -65,7 +65,7 @@ const App = () => {
           setHealth={setHealth}
           setHappiness={setHappiness}
         />
-        {/* <SpeechBubble></SpeechBubble> */}
+        <SpeechBubble></SpeechBubble>
       </div>
     </div>
   );
