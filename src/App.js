@@ -31,13 +31,16 @@ const App = () => {
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {
         if (prevHunger >= 70) {
-          if (isActive === true) {
-            setFox("hungry");
-          }
+          setIsActive((prevActive) => {
+            if (prevActive === true) {
+              setFox("hungry");
+            }
+            return prevActive;
+          });
         }
         return prevHunger;
       });
-    }, 3000);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
