@@ -1,10 +1,11 @@
 import React from "react";
 import "./buttons.css";
 
-const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
+
+const FeedButton = ({ isActive, setIsActive, setFoxState }) => {
+
   const handleFeedClick = () => {
     setFoxState("eating");
-    setHunger((prevHunger) => Math.max(prevHunger - 50, 0));
     setIsActive(false);
     setTimeout(() => {
       setFoxState("idle");

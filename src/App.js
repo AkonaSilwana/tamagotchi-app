@@ -13,19 +13,22 @@ const App = () => {
   const [fox, setFox] = useState("init");
   const MAX_HEALTH = 100;
   const MAX_HAPPINESS = 100;
+  const MAX_HUNGER = 100;
 
+  
+  
+  const [hunger, setHunger] = useState(0);
   const [isActive, setIsActive] = useState(true);
   const [health, setHealth] = useState(MAX_HEALTH);
   const [happiness, setHappiness] = useState(MAX_HAPPINESS);
-  const [hunger, setHunger] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState(Daybg);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHealth((prevHealth) => Math.max(prevHealth - 4, 0));
-      setHappiness((prevHappiness) => Math.max(prevHappiness - 6, 0));
-      setHunger((prevHunger) => prevHunger + 2);
-    }, 500);
+      setHealth((prevHealth) => Math.max(prevHealth - 1, 0));
+      setHappiness((prevHappiness) => Math.max(prevHappiness - 2, 0));
+    setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,11 +38,6 @@ const App = () => {
       <BackgroundImage backgroundState={backgroundImage} healthState={health}>
         <div className="tamagotchi">
           <Fox foxState={fox} />
-        </div>
-        <div className="stats">
-          <p>Health: {health}</p>
-          <p>Happiness: {happiness}</p>
-          <p>Hunger: {hunger}</p>
         </div>
         <div className="actions">
           <FeedButton
@@ -65,6 +63,14 @@ const App = () => {
             setHealth={setHealth}
             setHappiness={setHappiness}
           />
+        </div>
+        <div className="stats">
+          <p>Health: {health}</p>
+          <p>Happiness: {happiness}</p>
+          <p>Hunger: {hunger}</p>
+        </div>
+        <div className="tamagotchi">
+          <Fox foxState={fox} />
         </div>
       </BackgroundImage>
     </div>
