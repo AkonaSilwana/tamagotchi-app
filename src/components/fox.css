@@ -55,8 +55,8 @@
 
 .hungry {
   position: absolute;
-  top: 5rem;
-  left: 41rem;
+  top: 58%;
+  left: 47%;
 
   background-image: url("../../public/Hungry.png");
   background-repeat: no-repeat;
@@ -109,8 +109,8 @@
 
 .sleeping {
   position: absolute;
-  top: 10%;
-  left: 44%;
+  top: 58%;
+  left: 47%;
 
   background-image: url("../../public/Sleeping.png");
   background-repeat: no-repeat;

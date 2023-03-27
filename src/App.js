@@ -15,8 +15,6 @@ const App = () => {
   const MAX_HAPPINESS = 100;
   const MAX_HUNGER = 100;
 
-  
-  
   const [hunger, setHunger] = useState(0);
   const [isActive, setIsActive] = useState(true);
   const [health, setHealth] = useState(MAX_HEALTH);
@@ -27,8 +25,20 @@ const App = () => {
     const interval = setInterval(() => {
       setHealth((prevHealth) => Math.max(prevHealth - 1, 0));
       setHappiness((prevHappiness) => Math.max(prevHappiness - 2, 0));
-    setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
+      setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
     }, 1000);
+
+    let hungerInterval = setInterval(() => {
+      setHunger((prevHunger) => {
+        if (prevHunger >= 70) {
+          console.log(isActive);
+          if (isActive === true) {
+            setFox("hungry");
+          }
+        }
+        return prevHunger;
+      });
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
