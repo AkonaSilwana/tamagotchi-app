@@ -2,7 +2,7 @@ import "./fox.css";
 import React, { useState, useEffect } from "react";
 
 
-// const InitFox = <div className="idle"></div>;
+
 const Eating = <div className="eating"></div>;
 const happy = <div className="happy"></div>;
 const hungry = <div className="hungry"></div>;
@@ -14,9 +14,7 @@ const hatching = <div className="hatching"></div>
 const Fox = ({ foxState }) => {
   const [fox, setFox] = useState(null);
 
- 
-
-  useEffect(() => {
+    useEffect(() => {
 
     const setFoxIdle = () => {
       setFox(hatching)
