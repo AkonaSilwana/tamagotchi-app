@@ -43,7 +43,9 @@ const App = () => {
     }, 500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [health]);
+
+      
 
   return (
     <div>
