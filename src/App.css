@@ -7,8 +7,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 80vh;
-  box-sizing: content-box;
+  height: 0%;
+  width: 30%;
+  border-radius: 25%;
 }
 
 .tamagotchi {
@@ -20,28 +21,30 @@
 }
 
 .stats {
-  padding: 50px;
+  padding: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 6%;
   bottom: 0;
   width: 15%;
-  height: 76%;
-  background-color: transparent;
-  padding: 1rem;
+  height: max-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
 }
 
+.tamagotchi-screen:hover .actions {
+  display: block;
+}
+
 .actions {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 20px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
