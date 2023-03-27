@@ -3,12 +3,20 @@ import "./buttons.css";
 
 const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
   const handleFeedClick = () => {
+    setIsActive(false);
     setFoxState("eating");
-    setHunger((prevHunger) => Math.max(prevHunger - 1, 0));
+    setHunger((prevHunger) => {
+      prevHunger = prevHunger - 25;
+      if (prevHunger < 0) {
+        prevHunger = 0;
+      }
+      return prevHunger;
+    });
+
     setIsActive(false);
     setTimeout(() => {
-      setFoxState("idle");
       setIsActive(true);
+      setFoxState("idle");
     }, 3000);
   };
 
