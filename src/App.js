@@ -45,9 +45,19 @@ const App = () => {
       setHealth((prevHealth) => {
         let newHealth = prevHealth;
 
-        if (sleepiness <= 10 || hunger >= 90 || happiness <= 10) {
-          newHealth = Math.max(prevHealth - 3, 0);
-        } else if (sleepiness >= 80 || hunger <= 20 || happiness >= 80) {
+        if (sleepiness <= 10) {
+          newHealth = Math.max(newHealth - 1, 0);
+        }
+
+        if (hunger >= 90) {
+          newHealth = Math.max(newHealth - 1, 0);
+        }
+
+        if (happiness <= 10) {
+          newHealth = Math.max(newHealth - 1, 0);
+        }
+
+        if (sleepiness >= 80 || hunger <= 20 || happiness >= 80) {
           newHealth = Math.min(prevHealth + 1, 100);
         }
 

@@ -8,12 +8,14 @@ const HugButton = ({
   setSleepiness,
   setHappiness,
 }) => {
-  const MAX_HEALTH = 100;
+  const MAX_SLEEPINESS = 100;
   const MAX_HAPPINESS = 100;
 
   const handlHugClick = () => {
     setFoxState("happy");
-    setSleepiness((prevHealth) => Math.min(prevHealth + 1, MAX_HEALTH));
+    setSleepiness((prevSleepiness) =>
+      Math.min(prevSleepiness - 5, MAX_SLEEPINESS)
+    );
     setHappiness((prevHappiness) =>
       Math.min(prevHappiness + 20, MAX_HAPPINESS)
     );

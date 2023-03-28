@@ -13,27 +13,28 @@ const SleepButton = ({
   const MAX_HAPPINESS = 100;
   const MAX_HUNGER = 100;
   const INTERVAL = 1000;
+
   const handleSleepClick = () => {
     setIsActive(() => false);
     setFoxState("sleeping");
     let SleepInterval = setInterval(() => {
       setSleepiness((prevSleepiness) => {
-        const newSleepiness = Math.min(prevSleepiness + 8, MAX_SLEEPINESS);
+        const newSleepiness = Math.min(prevSleepiness + 5, MAX_SLEEPINESS);
         if (newSleepiness >= 95) {
           setFoxState("idle");
-          clearInterval(happinessInterval);
-
           setIsActive(() => true);
+          clearInterval(happinessInterval);
+          clearInterval(hungerInterval);
           clearInterval(SleepInterval);
         }
         return newSleepiness;
       });
     }, INTERVAL);
+
     let happinessInterval = setInterval(() => {
-      setHappiness((prevHappiness) =>
-        Math.min(prevHappiness - 1, MAX_HAPPINESS)
-      );
+      setHappiness((prevHappiness) => Math.min(prevHappiness - 1, 0));
     }, INTERVAL);
+
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {
         const newHunger = Math.min(prevHunger + 2, MAX_HUNGER);
