@@ -62,7 +62,7 @@ const App = () => {
       
 
   return (
-    <div>
+    <div className="App">
       <BackgroundImage backgroundState={backgroundImage} healthState={health}>
         <div className="tamagotchi">
           <Fox foxState={fox} />

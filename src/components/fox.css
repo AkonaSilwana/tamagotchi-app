@@ -1,8 +1,8 @@
 .idle {
   position: absolute;
-  top: 45%;
-  left: 11%;
-
+  top: 78%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/AtRest.png");
   background-repeat: no-repeat;
   width: 117px;
@@ -17,9 +17,9 @@
 
 .eating {
   position: absolute;
-  top: 58%;
-  left: 45%;
-
+  top: 78%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/Eating.png");
   background-repeat: no-repeat;
   width: 200px;
@@ -38,9 +38,9 @@
 
 .happy {
   position: absolute;
-  top: 50%;
-  left: 47%;
-
+  top: 74%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/Yay.png");
   background-repeat: no-repeat;
   width: 130.8px;
@@ -55,9 +55,9 @@
 
 .hungry {
   position: absolute;
-  top: 58%;
-  left: 47%;
-
+  top: 78%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/Hungry.png");
   background-repeat: no-repeat;
   width: 130px;
@@ -72,9 +72,9 @@
 }
 .dead {
   position: absolute;
-  top: 50%;
-  left: 47%;
-
+  top: 78%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/TombStone.png");
   background-repeat: no-repeat;
   width: 118px;
@@ -89,8 +89,9 @@
 
 .egg {
   position: absolute;
-  top: 50%;
-  left: 47%;
+  top: 75%;
+  left: 6%;
+  transform: scale(0.9);
   background-image: url("../../public/Egg1.png");
   background-repeat: no-repeat;
   width: 175px;
@@ -107,8 +108,9 @@
 }
 .hatching {
   position: absolute;
-  top: 50%;
-  left: 47%;
+  top: 72%;
+  left: 5%;
+  transform: scale(0.9);
   background-image: url("../../public/Egg2.png");
   background-repeat: no-repeat;
   width: 175px;
@@ -126,9 +128,9 @@
 
 .sleeping {
   position: absolute;
-  top: 58%;
-  left: 47%;
-
+  top: 78%;
+  left: 7.5%;
+  transform: scale(0.7);
   background-image: url("../../public/Sleeping.png");
   background-repeat: no-repeat;
   width: 250px;
