@@ -31,16 +31,35 @@ const App = () => {
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {
         if (prevHunger >= 70) {
-          if (isActive === true) {
-            setFox("hungry");
-          }
+          setIsActive((prevActive) => {
+            if (prevActive === true) {
+              setFox("hungry");
+            }
+            return prevActive;
+          });
         }
         return prevHunger;
       });
-    }, 3000);
+    }, 500);
+
+    setHealth((prevHealth) => {
+      if (prevHealth === 0) {
+        setIsActive((prevActive) => {
+        
+          
+          return false;
+        });
+        setFox("dead");
+       
+      }
+      return  prevHealth; 
+    });
+ 
 
     return () => clearInterval(interval);
-  }, []);
+  }, [health]);
+
+      
 
   return (
     <div>
@@ -78,9 +97,7 @@ const App = () => {
           <p>Happiness: {happiness}</p>
           <p>Hunger: {hunger}</p>
         </div>
-        <div className="tamagotchi">
-          <Fox foxState={fox} />
-        </div>
+
       </BackgroundImage>
     </div>
   );

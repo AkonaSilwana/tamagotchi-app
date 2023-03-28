@@ -1,21 +1,36 @@
 import "./fox.css";
 import React, { useState, useEffect } from "react";
 
-const InitFox = <div className="idle"></div>;
+
+// const InitFox = <div className="idle"></div>;
 const Eating = <div className="eating"></div>;
 const happy = <div className="happy"></div>;
 const hungry = <div className="hungry"></div>;
 const dead = <div className="dead"></div>;
-const hatching = <div className="hatching"></div>;
+const idle = <div className="idle"></div>;
 const sleeping = <div className="sleeping"></div>;
+const hatching = <div className="hatching"></div>
 
 const Fox = ({ foxState }) => {
-  const [fox, setFox] = useState(InitFox);
+  const [fox, setFox] = useState(null);
+
+ 
 
   useEffect(() => {
+
+    const setFoxIdle = () => {
+      setFox(hatching)
+
+      setTimeout(() => {
+        setFox(idle);
+      }, 3000);
+    };
+    const InitFox = () => (
+      <div className="egg" onClick={setFoxIdle} ></div>
+    );
     switch (foxState) {
       case "init":
-        setFox(InitFox);
+        setFox(<InitFox/>)
         break;
       case "eating":
         setFox(Eating);
@@ -28,9 +43,6 @@ const Fox = ({ foxState }) => {
         break;
       case "dead":
         setFox(dead);
-        break;
-      case "hatching":
-        setFox(hatching);
         break;
       case "sleeping":
         setFox(sleeping);
