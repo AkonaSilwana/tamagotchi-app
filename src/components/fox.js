@@ -46,7 +46,7 @@ const Fox = ({ foxState }) => {
         setFox(sleeping);
         break;
       default:
-        setFox(InitFox);
+        setFox(idle);
     }
   }, [foxState]);
 
