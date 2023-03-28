@@ -18,11 +18,12 @@ const SleepButton = ({
   const handleSleepClick = () => {
     setIsActive(() => false);
     setFoxState("sleeping");
-    let SleepInterval = setInterval(() => {
-      setSleepiness((prevSleepiness) => {
-        const newSleepiness = Math.min(prevSleepiness + 8, MAX_SLEEPINESS);
-        if (newSleepiness >= 95) {
-          setFoxState("init");
+    let healthInterval = setInterval(() => {
+      setHealth((prevHealth) => {
+        const newHealth = Math.min(prevHealth + 8, MAX_HEALTH);
+        if (newHealth >= 95) {
+          clearInterval(healthInterval);
+          setFoxState("idle");
           clearInterval(happinessInterval);
 
           console.log("sleepclick");
