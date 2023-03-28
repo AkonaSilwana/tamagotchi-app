@@ -23,7 +23,7 @@ const SleepButton = ({
         const newHealth = Math.min(prevHealth + 8, MAX_HEALTH);
         if (newHealth >= 95) {
           clearInterval(healthInterval);
-          setFoxState("init");
+          setFoxState("idle");
           clearInterval(happinessInterval);
 
           setIsActive(true);
