@@ -19,7 +19,6 @@ const HugButton = ({
     );
     setIsActive(() => false);
     setTimeout(() => {
-      console.log("hug click");
       setIsActive(() => true);
       setFoxState("idle");
     }, 4000);
