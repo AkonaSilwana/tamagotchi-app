@@ -29,7 +29,7 @@ const App = () => {
       setHappiness((prevHappiness) => Math.max(prevHappiness - 1, 0));
       setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
 
-      console.log(isActive);
+      //console.log(isActive);
       if (hunger >= 70) {
         if (isActive === true) {
           setFox("hungry");

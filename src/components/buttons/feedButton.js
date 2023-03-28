@@ -15,7 +15,6 @@ const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
 
     setIsActive(() => false);
     setTimeout(() => {
-      console.log("feed click");
       setIsActive(() => true);
       setFoxState("idle");
     }, 3000);
