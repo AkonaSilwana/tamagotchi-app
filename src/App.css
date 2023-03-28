@@ -48,9 +48,12 @@
 }
 
 .actions button{
-  margin-right: 50%;
+  margin-right: 45%;
   padding: 10%;
 }
+  .actions button:hover{
+  transform: scale(150%);
+  }
 
 @media (max-width: 768px) {
   .App {
@@ -88,7 +91,11 @@
   }
   
   .actions button {
-    margin-right: 2%;
+    margin-right: 4%;
     padding: 5%;
+  }
+  
+  .actions button:hover{
+  transform: scale(150%);
   }
 }

@@ -26,7 +26,7 @@ const App = () => {
       setHealth((prevHealth) => Math.max(prevHealth - 1, 0));
       setHappiness((prevHappiness) => Math.max(prevHappiness - 2, 0));
       setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
-    }, 8000);
+    }, 1000);
 
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {

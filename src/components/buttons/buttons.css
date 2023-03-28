@@ -11,6 +11,3 @@
   border: none;
   border-radius: 25%;
 }
-.button:hover {
-  transform: scale(150%);
-}
