@@ -1,58 +1,55 @@
 import React from "react";
 import "./buttons.css";
-
 const SleepButton = ({
   isActive,
   setIsActive,
   setFoxState,
-  setHealth,
+  setSleepiness,
   setHappiness,
   setHunger,
   healthState,
 }) => {
-  const MAX_HEALTH = 100;
+  const MAX_SLEEPINESS = 100;
   const MAX_HAPPINESS = 100;
   const MAX_HUNGER = 100;
   const INTERVAL = 1000;
-
   const handleSleepClick = () => {
-    setIsActive(false);
+    setIsActive(() => false);
     setFoxState("sleeping");
-    let healthInterval = setInterval(() => {
-      setHealth((prevHealth) => {
-        const newHealth = Math.min(prevHealth + 8, MAX_HEALTH);
-        if (newHealth >= 95) {
-          clearInterval(healthInterval);
-          setFoxState("init");
+    let SleepInterval = setInterval(() => {
+      setSleepiness((prevSleepiness) => {
+        const newSleepiness = Math.min(prevSleepiness + 8, MAX_SLEEPINESS);
+        if (newSleepiness >= 95) {
+          setFoxState("idle");
           clearInterval(happinessInterval);
 
-          setIsActive(true);
+          setIsActive(() => true);
+          clearInterval(SleepInterval);
         }
-        return newHealth;
+        return newSleepiness;
       });
     }, INTERVAL);
-
     let happinessInterval = setInterval(() => {
       setHappiness((prevHappiness) =>
-        Math.min(prevHappiness + 8, MAX_HAPPINESS)
+        Math.min(prevHappiness - 1, MAX_HAPPINESS)
       );
     }, INTERVAL);
-
     let hungerInterval = setInterval(() => {
       setHunger((prevHunger) => {
         const newHunger = Math.min(prevHunger + 2, MAX_HUNGER);
         if (newHunger >= 70) {
-          clearInterval(healthInterval);
+          clearInterval(SleepInterval);
           setFoxState("hungry");
           clearInterval(happinessInterval);
+          setTimeout(() => {
+            setIsActive(() => true);
+          }, INTERVAL);
           clearInterval(hungerInterval);
-          setIsActive(true);
         }
         return newHunger;
       });
     }, INTERVAL);
   };
-
   return (
     <button
       className={isActive ? "activeButton" : "inactiveButton"}
@@ -63,5 +60,4 @@ const SleepButton = ({
     </button>
   );
 };
-
 export default SleepButton;

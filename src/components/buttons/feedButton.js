@@ -3,7 +3,7 @@ import "./buttons.css";
 
 const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
   const handleFeedClick = () => {
-    setIsActive(false);
+    setIsActive(() => false);
     setFoxState("eating");
     setHunger((prevHunger) => {
       prevHunger = prevHunger - 25;
@@ -13,9 +13,9 @@ const FeedButton = ({ isActive, setIsActive, setFoxState, setHunger }) => {
       return prevHunger;
     });
 
-    setIsActive(false);
+    setIsActive(() => false);
     setTimeout(() => {
-      setIsActive(true);
+      setIsActive(() => true);
       setFoxState("idle");
     }, 3000);
   };
