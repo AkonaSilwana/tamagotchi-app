@@ -25,20 +25,22 @@ const App = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSleepiness((prevSleepiness) => Math.max(prevSleepiness - 1, 0));
-      setHappiness((prevHappiness) => Math.max(prevHappiness - 1, 0));
-      setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
+      if (fox !== "init") {
+        setSleepiness((prevSleepiness) => Math.max(prevSleepiness - 1, 0));
+        setHappiness((prevHappiness) => Math.max(prevHappiness - 1, 0));
+        setHunger((prevHunger) => Math.min(prevHunger + 2, MAX_HUNGER));
 
-      //console.log(isActive);
-      if (hunger >= 70) {
-        if (isActive === true) {
-          setFox("hungry");
+        //console.log(isActive);
+        if (hunger >= 70) {
+          if (isActive === true) {
+            setFox("hungry");
+          }
         }
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [sleepiness, hunger, isActive]);
+  }, [fox, sleepiness, hunger, isActive]);
 
   useEffect(() => {
     const healthInterval = setInterval(() => {
@@ -80,7 +82,7 @@ const App = () => {
         healthState={sleepiness}
       >
         <div className="tamagotchi">
-          <Fox foxState={fox} />
+          <Fox foxState={fox} setFoxState={setFox} />
         </div>
         <div className="actions">
           <FeedButton
