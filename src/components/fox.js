@@ -1,6 +1,7 @@
 import "./fox.css";
 import React, { useState, useEffect } from "react";
 import SpeechBubble from "./speechBubble";
+import Speeches from "./Speeches";
 
 const Eating = (
   <>
@@ -28,7 +29,7 @@ const dead = (
 );
 const idle = (
   <>
-  <SpeechBubble text="Hello! I am your digital friend. I grow as your career grows I am here to keep you company. you can play with me by clicking the buttons give me a name" />
+  <Speeches text1="Hello! I am your digital friend. I grow as your career grows I am here to keep you company. You can play with me by clicking the buttons give me a name " />
   <div className="idle"></div>
   </>
 );
@@ -52,7 +53,7 @@ const Fox = ({ foxState }) => {
     const InitFox = () => (
       <>
       <SpeechBubble text="Hi there Click me to hatch!" />
-        <div className="egg" onClick={setFoxIdle}></div>
+      <div className="egg" onClick={setFoxIdle}></div>
       </>
     );
     switch (foxState) {
