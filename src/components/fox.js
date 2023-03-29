@@ -5,8 +5,8 @@ import Speeches from "./Speeches";
 
 const Eating = (
   <>
-  <SpeechBubble text="Thank you for feeding me. I really needed that" />
-  <div className="eating"></div>
+    <SpeechBubble text="Thank you for feeding me. I really needed that" />
+    <div className="eating"></div>
   </>
 );
 const happy = (
@@ -17,14 +17,14 @@ const happy = (
 );
 const hungry = (
   <>
-  <SpeechBubble text="Feed me!" />
-  <div className="hungry"></div>
+    <SpeechBubble text="Feed me!" />
+    <div className="hungry"></div>
   </>
 );
 const dead = (
   <>
-  <SpeechBubble text="RIP" />
-  <div className="dead"></div>
+    <SpeechBubble text="RIP" />
+    <div className="dead"></div>
   </>
 );
 const idle = (
@@ -60,6 +60,9 @@ const Fox = ({ foxState }) => {
       case "init":
         setFox(<InitFox />);
         break;
+      case "hatching":
+        setFox(hatching);
+        break;
       case "eating":
         setFox(Eating);
         break;
@@ -74,6 +77,9 @@ const Fox = ({ foxState }) => {
         break;
       case "sleeping":
         setFox(sleeping);
+        break;
+      case "idle":
+        setFox(idle);
         break;
       default:
         setFox(idle);
