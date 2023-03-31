@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Tamagotchi App
+
+The goal of the tamagotchi app was to create a virtual pet that can be named, fed, hugged and can sleep. the player must maintain a healthy state of the pet by managing their happiness, hunger, health and tiredness levels. The player starts of by naming the pet then they need to press the buttons to manage the states.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
